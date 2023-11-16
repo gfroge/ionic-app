@@ -3,7 +3,6 @@
 </script>
 
 <template>
-sadf
 </template>
 
 <style scoped lang='scss'>

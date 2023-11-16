@@ -6,10 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "test:e2e": "cypress run",
-    "test:unit": "vitest",
-    "lint": "eslint"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@ionic/vue": "^7.0.0",
@@ -22,6 +19,8 @@
   "devDependencies": {
     "@vitejs/plugin-legacy": "^4.0.2",
     "@vitejs/plugin-vue": "^4.0.0",
+    "sass": "latest",
+    "sass-loader": "latest",
     "terser": "^5.4.0",
     "typescript": "^5.1.6",
     "vite": "^4.3.9",

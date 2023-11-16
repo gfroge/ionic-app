@@ -1,0 +1,5 @@
+$area_top: 44px;
+$area_bottom: 34px;
+
+$safe_area_top: env(safe-area-inset-top, $area_top);
+$safe_area_bottom: env(safe-area-inset-bottom, $area_bottom);
