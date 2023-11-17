@@ -28,7 +28,6 @@ const setIsErrorOpen = (val: boolean) => {
 };
 
 const addProduct = async () => {
-  const { username, password } = formData;
   try {
     const productData = {
       ...formData,
