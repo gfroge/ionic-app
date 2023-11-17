@@ -19,7 +19,7 @@ onMounted(async () => {
   const savedProducts = store.state.StoreProducts.products;
   if (!savedProducts.length) {
     const { data } = await getProducts(5);
-    store.state.StoreProducts.products = data.products;
+    store.commit('StoreProducts/assignProducts', data.products) ;
   }
 });
 </script>

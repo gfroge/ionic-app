@@ -1,23 +1,28 @@
 <script setup lang="ts">
 import { IonHeader, IonToolbar, IonIcon, IonButton } from "@ionic/vue";
-import { logoIonic, chevronBack } from "ionicons/icons";
+import { logoIonic, chevronBack, personOutline } from "ionicons/icons";
 import { useStore } from "vuex";
-import { computed } from "vue";
+import { useRouter } from "vue-router";
 
 const store = useStore();
-
-const isLoggedIn = computed(() =>
-  Boolean(store.state.StoreAccount.login && store.state.StoreAccount.username)
-);
+const router = useRouter()
 
 withDefaults(
   defineProps<{
     backButton: boolean;
+    withProfile: boolean
   }>(),
   {
     backButton: false,
+    withProfile: true
   }
 );
+
+
+const auth = () => {
+  if(store.getters["StoreAccount/isLoggedIn"]) return 
+  router.push('/auth')
+}
 </script>
 
 <template>
@@ -28,11 +33,12 @@ withDefaults(
           <div
             v-if="backButton"
             @click="$router.back()"
-            class="header__back"
+            class="header__icon-info"
           >
             <ion-icon :icon="chevronBack" />
             Back
           </div>
+
         </div>
         <div class="header__slot header__logo">
           <ion-icon
@@ -42,8 +48,14 @@ withDefaults(
           />
         </div>
         <div class="header__slot">
-          <ion-icon :icon="chevronBack" />
-          {{  isLoggedIn ? store.state.StoreAccount.username : "Login" }}
+          <div v-if="withProfile" class="header__icon-info" @click="auth">
+            <ion-icon :icon="personOutline" />
+            {{
+              store.getters["StoreAccount/isLoggedIn"]
+                ? store.state.StoreAccount.username
+                : "Login"
+            }}
+          </div>
         </div>
       </div>
     </ion-toolbar>
@@ -63,17 +75,25 @@ ion-button {
     width: 100%;
     max-width: 400px;
     height: 100%;
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-  &__back {
+  &__icon-info {
     display: flex;
     gap: 8px;
     align-items: flex-end;
     cursor: pointer;
+  }
+
+  &__slot {
+    @include h3;
+    justify-self: center;
+    align-self: center;
   }
 }
 </style>

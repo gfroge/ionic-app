@@ -2,16 +2,24 @@
 import { IonPage, IonContent } from "@ionic/vue";
 import { WidgetHeader } from "~/widgets";
 import { CardCenter } from "~/shared";
-import { EntityProduct } from "~/entities";
+import { FeatureAuth } from "~/features";
 </script>
 
 <template>
   <ion-page>
-    <widget-header />
-    <ion-content> 
-      <CardCenter title="title"/>
+    <widget-header :with-profile="false" />
+    <ion-content>
+      <div class="wrapper">
+        <card-center title="Login">
+          <feature-auth />
+        </card-center>
+      </div>
     </ion-content>
   </ion-page>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.wrapper {
+  margin-top: 16px;
+}
+</style>
