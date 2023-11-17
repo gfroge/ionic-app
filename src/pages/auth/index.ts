@@ -6,4 +6,10 @@ export default [
     name: 'Auth',
     component: View,
   },
+  {
+    path: '/',
+    redirect: to => {
+      return { path: '/auth' }
+    },
+  },
 ]
