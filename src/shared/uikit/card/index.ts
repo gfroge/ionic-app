@@ -1,0 +1,1 @@
+export { default as CardCenter } from './card.center.vue'

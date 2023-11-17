@@ -1,0 +1,1 @@
+export { default as WidgetFooter } from './widget.footer.vue'

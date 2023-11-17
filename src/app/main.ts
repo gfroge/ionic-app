@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
-
+import store from './store'
 import { IonicVue } from '@ionic/vue';
 
 /* Core CSS required for Ionic components to work properly */
@@ -24,8 +24,11 @@ import '@ionic/vue/css/display.css';
 import './styles/theme.css';
 
 const app = createApp(App)
-  .use(IonicVue)
-  .use(router);
+  .use(IonicVue, {
+    mode: 'ios',
+  })
+  .use(router)
+  .use(store)
   
 router.isReady().then(() => {
   app.mount('#app');

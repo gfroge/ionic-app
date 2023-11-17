@@ -1,8 +1,8 @@
 import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'
-import path from 'path'
 import { defineConfig } from 'vite'
 
+const path = require('path')
 const pathSrc = path.resolve(__dirname, './src')
 
 // https://vitejs.dev/config/
@@ -14,7 +14,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': pathSrc,
-      '~': pathSrc,
+      '~': pathSrc
     },
   },
   css: {

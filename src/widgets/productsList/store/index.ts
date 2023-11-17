@@ -1,0 +1,1 @@
+export { default as StoreProducts } from './store.products.ts'

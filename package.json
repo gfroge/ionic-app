@@ -2,7 +2,6 @@
   "name": "ionic-app-base",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -11,7 +10,10 @@
   "dependencies": {
     "@ionic/vue": "^7.0.0",
     "@ionic/vue-router": "^7.0.0",
+    "@types/source-map": "latest",
+    "axios": "^1.6.2",
     "ionicons": "^7.0.0",
+    "node-sass": "latest",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",
     "vuex": "^4.0.2"

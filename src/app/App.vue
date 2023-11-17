@@ -1,10 +1,9 @@
-<script setup lang='ts'>
-
+<script setup lang="ts">
+import { IonRouterOutlet, IonApp } from "@ionic/vue";
 </script>
 
 <template>
-sadf
+  <ion-app mode="ios">
+    <ion-router-outlet />
+  </ion-app>
 </template>
-
-<style scoped lang='scss'>
-</style>
