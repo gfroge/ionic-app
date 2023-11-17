@@ -1,0 +1,1 @@
+export { default as FeatureCreateProduct } from './feature.create-product.vue'

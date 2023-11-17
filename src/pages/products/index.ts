@@ -13,6 +13,11 @@ export default [
         component: ViewsList,
       },
       {
+        path: '/products/create',
+        name: 'ViewsCreate',
+        component: ViewsCreate,
+      },
+      {
         path: '/products/:productId',
         name: 'ViewsProduct',
         component: ViewsProduct,

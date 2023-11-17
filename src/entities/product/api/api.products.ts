@@ -21,3 +21,7 @@ export const getProducts = (
 export const getProduct = (
   id: number | string
 ): Promise<AxiosResponse<FullProductInfo>> => client.get(`products/${id}`);
+
+export const createProduct = (
+  data: Omit<FullProductInfo, "id">
+): Promise<AxiosResponse<FullProductInfo>> => client.post("products/add", data);
