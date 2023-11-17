@@ -19,7 +19,7 @@ onMounted(async () => {
   <ion-page>
     <widget-header back-button/>
     <ion-content>
-      <div class="wrapper">
+      <div class="page-content-wrapper wrapper">
         <entity-product-info
           v-if="Object.keys(product).length"
           :product="product"

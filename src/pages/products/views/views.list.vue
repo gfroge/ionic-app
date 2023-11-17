@@ -7,7 +7,9 @@ import { WidgetProductsList, WidgetHeader } from "~/widgets";
   <ion-page>
     <widget-header />
     <ion-content>
-      <widget-products-list />
+      <div class="page-content-wrapper">
+        <widget-products-list />
+      </div>
     </ion-content>
   </ion-page>
 </template>

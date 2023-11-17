@@ -7,3 +7,10 @@ import { IonRouterOutlet, IonApp } from "@ionic/vue";
     <ion-router-outlet />
   </ion-app>
 </template>
+
+
+<style lang="scss">
+.page-content-wrapper{
+  padding-bottom: calc($safe_area_bottom + 10px);
+}
+</style>

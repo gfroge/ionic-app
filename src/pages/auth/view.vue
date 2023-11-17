@@ -9,7 +9,7 @@ import { FeatureAuth } from "~/features";
   <ion-page>
     <widget-header :with-profile="false" />
     <ion-content>
-      <div class="wrapper">
+      <div class="page-content-wrapper wrapper">
         <card-center title="Login">
           <feature-auth />
         </card-center>
@@ -19,6 +19,7 @@ import { FeatureAuth } from "~/features";
 </template>
 
 <style scoped lang="scss">
+
 .wrapper {
   margin-top: 16px;
 }

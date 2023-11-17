@@ -9,7 +9,7 @@ import { FeatureCreateProduct } from "~/features";
   <ion-page>
     <widget-header />
     <ion-content>
-      <div class="wrapper">
+      <div class="page-content-wrapper wrapper">
         <card-center title="Create product">
           <feature-create-product />
         </card-center>
